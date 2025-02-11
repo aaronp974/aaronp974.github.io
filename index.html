@@ -13,7 +13,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">      
-
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head> 
 
 <body>
@@ -28,7 +28,7 @@
                     <div class="profile-content">
 		                
                         <h1 class="name">Aaron Pigrée</h1>
-		                <h2 class="desc">Étudiant</h2> 
+		                <h2 id="desc" class="desc">Étudiant</h2> 
 		                
                         <ul class="social list-inline">
 		                    
@@ -36,12 +36,20 @@
 		                    <li class="list-inline-item"><a href="https://www.instagram.com/axron_dodo974/?hl=fr"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 32 32" width="32px" height="32px"><path d="M 11.46875 5 C 7.917969 5 5 7.914063 5 11.46875 L 5 20.53125 C 5 24.082031 7.914063 27 11.46875 27 L 20.53125 27 C 24.082031 27 27 24.085938 27 20.53125 L 27 11.46875 C 27 7.917969 24.085938 5 20.53125 5 Z M 11.46875 7 L 20.53125 7 C 23.003906 7 25 8.996094 25 11.46875 L 25 20.53125 C 25 23.003906 23.003906 25 20.53125 25 L 11.46875 25 C 8.996094 25 7 23.003906 7 20.53125 L 7 11.46875 C 7 8.996094 8.996094 7 11.46875 7 Z M 21.90625 9.1875 C 21.402344 9.1875 21 9.589844 21 10.09375 C 21 10.597656 21.402344 11 21.90625 11 C 22.410156 11 22.8125 10.597656 22.8125 10.09375 C 22.8125 9.589844 22.410156 9.1875 21.90625 9.1875 Z M 16 10 C 12.699219 10 10 12.699219 10 16 C 10 19.300781 12.699219 22 16 22 C 19.300781 22 22 19.300781 22 16 C 22 12.699219 19.300781 10 16 10 Z M 16 12 C 18.222656 12 20 13.777344 20 16 C 20 18.222656 18.222656 20 16 20 C 13.777344 20 12 18.222656 12 16 C 12 13.777344 13.777344 12 16 12 Z"/></svg></a></li>                   
 		                
                         </ul> 		            
-                    </div>			    
+                    </div>
                 </div>
-	            
+                <div class="col-12 col-md-auto">
+                    <label class="switch">
+                        <img src="assets/images/fr_flag.png" alt="Fr" width="20" class="flag-left">
+                        <input type="checkbox" id="toggle-lang">
+                        <span class="slider round"></span>
+                        <img src="assets/images/uk_flag.png" alt="En" width="20" class="flag-right">
+                    </label>
+                </div>			    
+
                 <div class="col-12 col-md-auto">
 	                
-                    <a class="btn btn-cta-primary" href="https://www.google.com/intl/fr/gmail/about/" target="_blank"><i class="fas fa-paper-plane"></i>Me contacter</a>        
+                    <a id="contact-link" class="btn btn-cta-primary" href="https://www.google.com/intl/fr/gmail/about/" target="_blank"><i class="fas fa-paper-plane"></i>Me contacter</a>        
 	            
                 </div>
 	        </div>        
@@ -54,11 +62,11 @@
                 <section class="about section">                    
                     <div class="section-inner shadow-sm rounded">
                         
-                        <h2 class="heading">À propos de moi</h2>
+                        <h2 id="about-heading" class="heading">À propos de moi</h2>
                         
                         <div class="content">
                             
-                            <p>Bonjour, je me nomme Aaron Pigrée et je suis étudiant à l'IUT de la Réunion. Actuellement, je poursuis ma formation en BUT Réseaux & Télécommunications. Je souhaite poursuivre mes études jusqu'au Master pour ainsi devenir un ingénieur en informatique. Parlons loisirs : je suis un grand fan de jeux vidéos et j'apprécie écouté de la musique. Pour les styles de musique, je n'en ai pas vraiment mais j'ai une petite préférence pour le rap. Je suis également intéressé par la programmation.</p>
+                            <p id="about-text">Bonjour, je me nomme Aaron Pigrée et je suis étudiant à l'IUT de la Réunion. Actuellement, je poursuis ma formation en BUT Réseaux & Télécommunications. Je souhaite poursuivre mes études jusqu'au Master pour ainsi devenir un ingénieur en informatique. Parlons loisirs : je suis un grand fan de jeux vidéos et j'apprécie écouté de la musique. Pour les styles de musique, je n'en ai pas vraiment mais j'ai une petite préférence pour le rap. Je suis également intéressé par la programmation.</p>
                          
                         </div>
                     </div>                
@@ -72,15 +80,15 @@
                         <div class="content">                       
                             <div class="item featured text-center">
                                 
-                                <h3 class="title mb-3">Ressources étudiées au cours de ma formation</h3>
+                                <h3 id="resources-heading" class="title mb-3">Ressources étudiées au cours de ma formation</h3>
             
                                 <div class="desc text-start">                                    
                                     
-                                    <p>Voici mon portfolio personnel qui constitue le suivi de ma formation en BUT Réseaux & Télécommunications en regroupant tous les projets que j'ai travaillé durant celle-ci. Chacune d'entres elles se verront attribuer des notes ainsi que mon niveau de maîtrise, qui sera évalué selon mes ressentis et mes capacités.</p>
+                                    <p id="portfolio-text">Voici mon portfolio personnel qui constitue le suivi de ma formation en BUT Réseaux & Télécommunications en regroupant tous les projets que j'ai travaillé durant celle-ci. Chacune d'entres elles se verront attribuer des notes ainsi que mon niveau de maîtrise, qui sera évalué selon mes ressentis et mes capacités.</p>
                                 
                                 </div> 
                                 
-                                <a class="btn btn-cta-secondary" href="portfolio/index.html" target="_blank"><i class="fas fa-thumbs-up"></i>Voir entièrement le portfolio</a>                 
+                                <a id="portfolio-link" class="btn btn-cta-secondary" href="portfolio/index.html" target="_blank"><i class="fas fa-thumbs-up"></i>Voir entièrement le portfolio</a>                 
                             
                             </div>
                             
@@ -99,7 +107,7 @@
                                     
                                     <p class="summary"><!--insérer le contexte/ressources--></p>
                                 </div>
-                                <p>Pour plus d'informations, veuillez cliquer sur "Voir entièrement le portfolio" dans cette rubrique.</p>
+                                <p id="more-info-text">Pour plus d'informations, veuillez cliquer sur 'Voir entièrement le portfolio' dans cette rubrique.</p>
 
                             </div>
                         </div> 
@@ -109,20 +117,20 @@
                 <section class="projects section">
                     <div class="section-inner shadow-sm rounded">
                         
-                        <h2 class="heading">Formations / Diplômes</h2>
+                        <h2 id="degree-heading" class="heading">Formations / Diplômes</h2>
                         
                         <div class="content">
                             <div class="item">
                                 
-                                <h3 class="title">Formation : BUT Réseaux & Télécommunications</h3>
-                                <p class="summary">IUT de Saint-Pierre, La Réunion (2022 - en cours)</p>
+                                <h3 id="training1-heading" class="title">Formation : BUT Réseaux & Télécommunications</h3>
+                                <p id="training1-text" class="summary">IUT de Saint-Pierre, La Réunion (2022 - en cours)</p>
                             
                             </div>
                             
                             <div class="item">
                                 
-                                <h3 class="title">Diplôme : Baccalauréat Général - spécialités Mathématiques / Sciences de l'Ingénieur</h3>
-                                <p class="summary">Lycée Pierre Lagourgue, La Réunion (2022)<br><br><br>Pour plus d'informations, visitez mon profil LinkedIn ou cliquez sur "Mon CV" dans la rubrique Informations.</p>
+                                <h3 id="training2-heading" class="title">Diplôme : Baccalauréat Général - spécialités Mathématiques / Sciences de l'Ingénieur</h3>
+                                <p id="training2-text" class="summary">Lycée Pierre Lagourgue, La Réunion (2022)<br><br><br>Pour plus d'informations, visitez mon profil LinkedIn ou cliquez sur 'Mon CV' dans la rubrique Informations.</p>
                                 
                             </div>                           
                         </div>
@@ -134,18 +142,24 @@
                  <aside class="info aside section">
                     <div class="section-inner shadow-sm rounded">
                         
-                        <h2 class="heading sr-only">Informations</h2>
+                        <h2 id="information-heading" class="heading sr-only">Informations</h2>
                         
                         <div class="content">
                             
                             <ul class="list-unstyled">
                                 
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Localisation : </span>La Réunion, France</li>
+                                <li id="information-text"><i class="fas fa-map-marker-alt"></i>La Réunion, France</li>
                                 <li><i class="fas fa-envelope"></i><span class="sr-only">E-mail : </span>a.pigree@rt-iut.re</li>
                                 
                                 <div class="col-12 col-md-auto">
 	                
                                     <a class="btn btn-cta-primary" href="CV PIGREE Aaron.pdf" target="_blank"><i class="fas fa-paper-plane"></i>Mon CV</a>        
+                                
+                                </div>
+
+                                <div class="col-12 col-md-auto">
+	                
+                                    <a class="btn btn-cta-primary" href="CV PIGREE Aaron English.pdf" target="_blank"><i class="fas fa-paper-plane"></i>My CV</a>        
                                 
                                 </div>
                             </ul>
@@ -156,7 +170,7 @@
                 <aside class="skills aside section">
                     <div class="section-inner shadow-sm rounded">
                         
-                        <h2 class="heading">Compétences</h2>
+                        <h2 id="skills-heading" class="heading">Compétences</h2>
                         
                         <div class="content">
                             
@@ -165,7 +179,7 @@
                             <div class="skillset">                              
                                 <div class="item">
                                     
-                                    <h3 class="level-title">Python<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left"><i class="fas fa-info-circle"></i>Intermédiare</span></h3>
+                                    <h3 id="skill1-text" class="level-title">Python<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Intermédiaire</span></h3>
 
                                     <div class="level-bar progress">									    
                                         <div class="progress-bar level-bar-inner" role="progressbar" style="width: 50%" aria-valuenow="50"  aria-valuemin="0" aria-valuemax="96"></div>
@@ -176,10 +190,10 @@
                                 
                                 <div class="item">
                                     
-                                    <h3 class="level-title">Langage C<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left"><i class="fas fa-info-circle"></i>Débutant</span></h3>
+                                    <h3 id="skill2-text" class="level-title">Langage C<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Intermédiare</span></h3>
                                     
                                     <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 25%" aria-valuenow="25"  aria-valuemin="0" aria-valuemax="96"></div>
+                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 50%" aria-valuenow="50"  aria-valuemin="0" aria-valuemax="96"></div>
 									
                                     </div>                                  
                                 
@@ -187,7 +201,7 @@
                                 
                                 <div class="item">
                                     
-                                    <h3 class="level-title">HTML5 &amp; CSS3<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left"><i class="fas fa-info-circle"></i>Intermédiaire</span></h3>
+                                    <h3 id="skill3-text" class="level-title">HTML5 &amp; CSS3<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i></i>Intermédiaire</span></h3>
                                     
                                     <div class="level-bar progress">									    
                                         <div class="progress-bar level-bar-inner" role="progressbar" style="width: 50%" aria-valuenow="50"  aria-valuemin="0" aria-valuemax="96"></div>
@@ -198,7 +212,7 @@
                                 
                                 <div class="item">
                                     
-                                    <h3 class="level-title">Réseaux informatiques<span class="level-label" data-bs-toggle="tooltip" data-placement="left"><i class="fas fa-info-circle"></i>Avancé</span></h3>
+                                    <h3 id="skill4-text" class="level-title">Réseaux informatiques<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Avancé</span></h3>
                                     
                                     <div class="level-bar progress">									    
                                         <div class="progress-bar level-bar-inner" role="progressbar" style="width: 75%" aria-valuenow="75"  aria-valuemin="0" aria-valuemax="96"></div>
@@ -209,7 +223,7 @@
                                 
                                 <div class="item">
                                     
-                                    <h3 class="level-title">Windows<span class="level-label" data-bs-toggle="tooltip" data-placement="left"><i class="fas fa-info-circle"></i>Intermédiaire</span></h3>
+                                    <h3 id="skill5-text" class="level-title">Windows<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Intermédiaire</span></h3>
                                     
                                     <div class="level-bar progress">									    
                                         <div class="progress-bar level-bar-inner" role="progressbar" style="width: 50%" aria-valuenow="50"  aria-valuemin="0" aria-valuemax="96"></div>
@@ -220,10 +234,10 @@
                                 
                                 <div class="item">
                                     
-                                    <h3 class="level-title">Linux<span class="level-label" data-bs-toggle="tooltip" data-placement="left"><i class="fas fa-info-circle"></i>Intermédiaire</span></h3>
+                                    <h3 id="skill6-text" class="level-title">Linux<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Avancé</span></h3>
                                     
                                     <div class="level-bar progress">									    
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 50%" aria-valuenow="50"  aria-valuemin="0" aria-valuemax="96"></div>
+                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 75%" aria-valuenow="70"  aria-valuemin="0" aria-valuemax="96"></div>
 									
                                     </div>
                                                                 
@@ -231,7 +245,7 @@
                                 
                                 <div class="item">
                                     
-                                    <h3 class="level-title">Minutieux<br>Travail d'équipe<br>Sens de l'organisation</h3>
+                                    <h3 id="skills-group" class="level-title">Minutieux<br>Travail d'équipe<br>Sens de l'organisation</h3>
                                                                 
                                 </div>
                             </div>              
@@ -242,29 +256,29 @@
                 <aside class="languages aside section">
                     <div class="section-inner shadow-sm rounded">
                         
-                        <h2 class="heading">Langues</h2>
+                        <h2 id="languages-heading" class="heading">Langues</h2>
                         
                         <div class="content">
                             <ul class="list-unstyled">
                                 
                                 <li class="item">
 
-                                    <span class="title"><strong>Français:</strong></span>                                    
-                                    <span class="level">Langue natale<br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                                    <span id="language1-heading" class="title"><strong>Français:</strong></span>                                    
+                                    <span id="language1-text" class="level">Langue natale<br class="visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></span>
                                 
                                 </li>
                                 
                                 <li class="item">
                                     
-                                    <span class="title"><strong>Anglais:</strong></span> 
-                                    <span class="level">Compétence professionnelle limité <br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i></span>
+                                    <span id="language2-heading" class="title"><strong>Anglais:</strong></span> 
+                                    <span id="language2-text" class="level">Compétence professionnelle limité<br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i></span>
                                 
                                 </li>
 
                                 <li class="item">
                                     
-                                    <span class="title"><strong>Allemand:</strong></span> 
-                                    <span class="level">Notions<br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i></span>
+                                    <span id="language3-heading" class="title"><strong>Allemand:</strong></span> 
+                                    <span id="language3-text" class="level">Notions<br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i></span>
                                 
                                 </li>                                
                             </ul>
@@ -274,16 +288,189 @@
             </div>   
         </div>
     </div>
-    
+
     <footer class="footer">
         <div class="container text-center">
                 
-            <small class="copyright">Copyright 2025-2026 de Pigrée Aaron. Tous droits réservés.</small>
+            <small id="copyright-text" class="copyright">Copyright 2025-2026 de Pigrée Aaron. Tous droits réservés.</small>
         
         </div>
     </footer>
 
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        const translations = {
+            fr: {
+                desc: "Étudiant",
+                aboutHeading: "À propos de moi",
+                aboutText: "Bonjour, je me nomme Aaron Pigrée et je suis étudiant à l'IUT de la Réunion. Actuellement, je poursuis ma formation en BUT Réseaux & Télécommunications. Je souhaite poursuivre mes études jusqu'au Master pour ainsi devenir un ingénieur en informatique. Parlons loisirs : je suis un grand fan de jeux vidéos et j'apprécie écouté de la musique. Pour les styles de musique, je n'en ai pas vraiment mais j'ai une petite préférence pour le rap. Je suis également intéressé par la programmation.",
+                portfolioText: "Voici mon portfolio personnel qui constitue le suivi de ma formation en BUT Réseaux & Télécommunications en regroupant tous les projets que j'ai travaillé durant celle-ci. Chacune d'entres elles se verront attribuer des notes ainsi que mon niveau de maîtrise, qui sera évalué selon mes ressentis et mes capacités.",
+                copyrightText: "Copyright 2025-2026 de Pigrée Aaron. Tous droits réservés.",
+                resourcesHeading: "Ressources étudiées au cours de ma formation",
+                portfolioLink: "Voir entièrement le portfolio",
+                contactLink: "Me contacter",
+                moreInfoText: "Pour plus d'informations, veuillez cliquer sur 'Voir entièrement le portfolio' dans cette rubrique.",
+                informationHeading: "Informations",
+                informationText: "La Réunion, France",
+                degreeHeading: "Formations / Diplômes",
+                training1Heading: "Formation : BUT Réseaux & Télécommunications",
+                training1Text: "IUT de Saint-Pierre, La Réunion (2022 - en cours)",
+                training2Heading: "Diplôme : Baccalauréat Général - spécialités Mathématiques / Sciences de l'Ingénieur",
+                training2Text: "Lycée Pierre Lagourgue, La Réunion (2022)<br><br><br>Pour plus d'informations, visitez mon profil LinkedIn ou cliquez sur 'Mon CV' dans la rubrique Informations.",
+                skillsHeading: "Compétences",
+                skill1Text: "Python<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Intermédiaire</span>",
+                skill2Text: "Langage C<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Intermédiare</span>",
+                skill3Text: "HTML5 &amp; CSS3<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i></i>Intermédiaire</span>",
+                skill4Text: "Réseaux informatiques<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Avancé</span>",
+                skill5Text: "Windows<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Intermédiaire</span>",
+                skill6Text: "Linux<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Avancé</span>",
+                skillsGroup: "Minutieux<br>Travail d'équipe<br>Sens de l'organisation",
+                languagesHeading: "Langues",
+                language1Heading: "Français:",
+                language1Text: "Langue natale",
+                language2Heading: "Anglais:",
+                language2Text: "Compétence professionnelle limité",
+                language3Heading: "Allemand:",         
+                language3Text: "Notions",
+            },
+            en: {
+                desc: "Student",
+                aboutHeading: "About Me",
+                aboutText: "Hello, my name is Aaron Pigrée and I am a student at the University Institute of Technology of Reunion Island. Currently, I am continuing my training in BUT Networks & Telecommunications. I would like to continue my studies up to a Master's degree to become a computer engineer. Let's talk about hobbies: I'm a big fan of video games and I enjoy listening to music. As for styles of music, I don't really have any but I have a slight preference for rap. I am also interested in programming.",
+                portfolioText: "Here is my personal portfolio which constitutes the follow-up of my training in BUT Networks & Telecommunications by bringing together all the projects that I worked on during it. Each of them will be assigned grades as well as my level of mastery, which will be evaluated according to my feelings and my abilities.",
+                copyrightText: "Copyright 2025-2026 by Pigrée Aaron. All rights reserved.",
+                resourcesHeading: "Resources studied during my training",
+                portfolioLink: "See the entire portfolio",
+                contactLink: "Contact me",
+                moreInfoText: "For more information, please click on 'View full portfolio' in this section.",
+                informationHeading: "Information",
+                informationText: "Reunion Island, France",
+                degreeHeading: "Trainings / Degrees",
+                training1Heading: "Training : BUT Networks & Telecommunications",
+                training1Text: "UIT of Saint-Pierre, Reunion Island (2022 - in progress)",
+                training2Heading: "Degree : General Baccalaureate - Mathematics / Engineering Sciences specialties",
+                training2Text: "Pierre Lagougue High School, Reunion Island (2022)<br><br><br>For more information, visit my LinkedIn profile or click on 'My CV' in the Information section.",
+                skillsHeading: "Skills",
+                skill1Text: "Python<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Intermediate</span>",
+                skill2Text: "C language<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Intermediate</span>",
+                skill3Text: "HTML5 &amp; CSS3<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i></i>Intermediate</span>",
+                skill4Text: "IT networks<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Avanced</span>",
+                skill5Text: "Windows<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Intermediate</span>",
+                skill6Text: "Linux<span class='level-label' data-bs-toggle='tooltip' data-bs-placement='left'><i class='fas fa-info-circle'></i>Avanced</span>",
+                skillsGroup: "Meticulous<br>Teamwork<br>Organizational skills",
+                languagesHeading: "Languages",
+                language1Heading: "French:",
+                language1Text: "Native language",
+                language2Heading: "English:",
+                language2Text: "Limited professional skill",
+                language3Heading: "German:",         
+                language3Text: "Concepts",
+            }
+        };
+        
+        let currentLang = "fr";
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("toggle-lang").addEventListener("change", function() {
+                currentLang = this.checked ? "en" : "fr";
+                document.getElementById("desc").textContent = translations[currentLang].desc;
+                document.getElementById("about-heading").textContent = translations[currentLang].aboutHeading;
+                document.getElementById("about-text").textContent = translations[currentLang].aboutText;
+                document.getElementById("portfolio-text").textContent = translations[currentLang].portfolioText;
+                document.getElementById("copyright-text").textContent = translations[currentLang].copyrightText;
+                document.getElementById("resources-heading").textContent = translations[currentLang].resourcesHeading;
+                document.getElementById("portfolio-link").textContent = translations[currentLang].portfolioLink;
+                document.getElementById("contact-link").textContent = translations[currentLang].contactLink;
+                document.getElementById("more-info-text").textContent = translations[currentLang].moreInfoText;
+                document.getElementById("information-heading").textContent = translations[currentLang].informationHeading;
+                document.getElementById("information-text").textContent = translations[currentLang].informationText;
+                document.getElementById("degree-heading").textContent = translations[currentLang].degreeHeading;
+                document.getElementById("training1-heading").textContent = translations[currentLang].training1Heading;
+                document.getElementById("training1-text").textContent = translations[currentLang].training1Text;
+                document.getElementById("training2-heading").textContent = translations[currentLang].training2Heading;
+                document.getElementById("training2-text").innerHTML = translations[currentLang].training2Text;
+                document.getElementById("skills-heading").textContent = translations[currentLang].skillsHeading;
+                document.getElementById("skills-group").innerHTML = translations[currentLang].skillsGroup;
+                document.getElementById("skill1-text").innerHTML = translations[currentLang].skill1Text;
+                document.getElementById("skill2-text").innerHTML = translations[currentLang].skill2Text;
+                document.getElementById("skill3-text").innerHTML = translations[currentLang].skill3Text;
+                document.getElementById("skill4-text").innerHTML = translations[currentLang].skill4Text;
+                document.getElementById("skill5-text").innerHTML = translations[currentLang].skill5Text;
+                document.getElementById("skill6-text").innerHTML = translations[currentLang].skill6Text;
+                document.getElementById("languages-heading").textContent = translations[currentLang].languagesHeading;
+                document.getElementById("language1-heading").textContent = translations[currentLang].language1Heading;
+                document.getElementById("language1-text").textContent = translations[currentLang].language1Text;
+                document.getElementById("language2-heading").textContent = translations[currentLang].language2Heading;
+                document.getElementById("language2-text").textContent = translations[currentLang].language2Text;
+                document.getElementById("language3-heading").textContent = translations[currentLang].language3Heading;
+                document.getElementById("language3-text").textContent = translations[currentLang].language3Text;
+            });
+        });
+    </script>
+
+    <style>
+        .switch {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            margin-right: 20px;
+            width: 50px;
+            height: 25px;
+        }
+
+        .flag-left,
+        .flag-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .flag-left {
+            left: -30px;
+        }
+
+        .flag-right {
+            right: -30px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 25px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(25px);
+        }
+    </style>
 
 </body>
 </html> 
